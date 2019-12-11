@@ -8,12 +8,12 @@ import './styles.scss';
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
-// import {carReducer} from './reducers';
+import {carReducer} from './reducers';
 
-// const store = createStore(carReducer)
+const store = createStore(carReducer)
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-<Provider>
+<Provider store={store}>
     <App />
 </Provider>, rootElement);

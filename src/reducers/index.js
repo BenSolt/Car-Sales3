@@ -1,4 +1,4 @@
-const state = {
+const initialState = {
     additionalPrice: 0,
     car: {
       price: 26395,
@@ -36,7 +36,7 @@ const state = {
                 car:{
                     ...state.car,
                     features: state.car.features.filter(
-                    feature => feature.id !== action.payload.id
+                    item => item.id !== action.payload.id
                         )
                     },
                     additionalFeatures:state.additionalFeatures.concat(action.payload)
